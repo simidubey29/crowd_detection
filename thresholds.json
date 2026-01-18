@@ -1,0 +1,36 @@
+{
+  "motion_thresholds": {
+    "very_low": 0.60,
+    "normal": 1.20,
+    "elevated": 2.50,
+    "high": 4.00,
+    "critical": 6.00
+  },
+
+  "spike_detection": {
+    "enabled": true,
+    "spike_threshold": 2.0,
+    "override_risk": "CRITICAL"
+  },
+
+  "risk_labels": {
+    "very_low": "VERY LOW",
+    "normal": "NORMAL",
+    "elevated": "ELEVATED",
+    "high": "HIGH RISK",
+    "critical": "CRITICAL"
+  },
+
+  "verdict_mapping": {
+    "SAFE": ["VERY LOW", "NORMAL"],
+    "MONITOR": ["ELEVATED"],
+    "DANGEROUS": ["HIGH RISK", "CRITICAL"]
+  },
+
+  "metadata": {
+    "technique": "Optical Flow (Farneback)",
+    "analysis_type": "Crowd-level motion only",
+    "privacy": "No face recognition, no tracking",
+    "calibration": "Values obtained from crowd video calibration"
+  }
+}
